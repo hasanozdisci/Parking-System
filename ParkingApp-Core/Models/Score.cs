@@ -1,4 +1,4 @@
-﻿namespace ParkingWebApi.Models
+﻿namespace ParkingApp_Core.Models
 {
     public class Score
     {
