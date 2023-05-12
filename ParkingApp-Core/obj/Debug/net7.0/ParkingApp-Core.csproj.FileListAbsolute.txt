@@ -1,0 +1,12 @@
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\bin\Debug\net7.0\ParkingApp-Core.deps.json
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\bin\Debug\net7.0\ParkingApp-Core.dll
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\bin\Debug\net7.0\ParkingApp-Core.pdb
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ParkingApp-Core.csproj.AssemblyReference.cache
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ParkingApp-Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ParkingApp-Core.AssemblyInfoInputs.cache
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ParkingApp-Core.AssemblyInfo.cs
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ParkingApp-Core.csproj.CoreCompileInputs.cache
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ParkingApp-Core.dll
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\refint\ParkingApp-Core.dll
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ParkingApp-Core.pdb
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingApp-Core\obj\Debug\net7.0\ref\ParkingApp-Core.dll
