@@ -1,9 +1,9 @@
-﻿namespace ParkingWebApi.Models
+﻿namespace ParkingApp_Core.Models
 {
-    public class Car
+    public class Park
     {
         public int Id { get; set; }
-        public string Car_Plate { get; set; }
+        public bool IsBusy { get; set; } = false;
         public User User { get; set; }
         public int UserId { get; set; }
     }
