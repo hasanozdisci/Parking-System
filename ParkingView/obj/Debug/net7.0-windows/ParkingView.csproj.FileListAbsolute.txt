@@ -20,3 +20,4 @@ C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingView\obj\Debug\net7.0-window
 C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingView\obj\Debug\net7.0-windows\ParkingView.pdb
 C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingView\obj\Debug\net7.0-windows\ParkingView.genruntimeconfig.cache
 C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingView\obj\Debug\net7.0-windows\ref\ParkingView.dll
+C:\Users\hasan\Masaüstü\Dersler\ParkingApp\ParkingView\obj\Debug\net7.0-windows\ParkingView.RegisterForm.resources

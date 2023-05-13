@@ -6,6 +6,7 @@ using ParkingApp_Core;
 using ParkingApp_Core.Models;
 using ParkingWebApi.Application.UserOperations.Commands.LoginUser;
 using ParkingWebApi.Application.UserOperations.Queries.GetUsers;
+using ParkingWebApi.Comman;
 using ParkingWebApi.Data;
 
 namespace ParkingWebApi.Controllers
@@ -40,11 +41,19 @@ namespace ParkingWebApi.Controllers
             var response = new Response();
             try
             {
+                var user = await _context.Users.Include(c => c.Car).Include(s => s.Score).FirstOrDefaultAsync(x => x.Email == login.Email && x.Password == login.Password);
+                if (user is null)
+                {
+                    response.Message = "Kullanıcı bulunamadı";
+                    return new JsonResult(response);
+                }
                 LoginUserCommand command = new(_context, _mapper);
                 command.Model = login;
-                var user = await command.Handle();
+                command.User = user;
+                var result = await command.Handle();
                 response.Success = true;
-                response.Result = user;
+                response.Result = result;
+                return new JsonResult(response);
             }
             catch (Exception ex)
             {
@@ -52,17 +61,20 @@ namespace ParkingWebApi.Controllers
             }
             return new JsonResult(response);
         }
-        
+
 
 
         [HttpPost]
         public async Task<IActionResult> CreateUser(UserRequestModel.Register register)
         {
             var response = new Response();
+
             try
             {
+                if (!ModelState.IsValid)
+                    return new JsonResult(ResponseProvier.ModelState(ModelState.Values));
                 var user2 = await _context.Users.FirstOrDefaultAsync(u => u.Email == register.Email);
-                if(user2 is not null)
+                if (user2 is not null)
                 {
                     response.AlreadyExist();
                     return new JsonResult(response);
@@ -71,6 +83,8 @@ namespace ParkingWebApi.Controllers
                 {
                     Email = register.Email,
                     Password = register.Password,
+                    FirstName = register.FirstName,
+                    LastName = register.LastName,
                     Score = new Score()
                     {
                         Point = "0"
@@ -92,7 +106,5 @@ namespace ParkingWebApi.Controllers
             return new JsonResult(response);
 
         }
-        //[HttpGet]
-        //public async Task<IActionResult> ParkControl()
     }
 }

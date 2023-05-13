@@ -52,7 +52,7 @@ namespace ParkingApp_Core
             Exception.ErrorCode = ex.HResult;
             Exception.Message = string.IsNullOrEmpty(ex.Message) ? Message : ex.Message;
             Exception.InnerException = ex.InnerException == null ? "" : ex.InnerException.ToString();
-            Exception.StatusCode = ex.HResult == -2146233088 ? (int)HttpStatusCode.Unauthorized : (int)HttpStatusCode.InternalServerError;
+            //Exception.StatusCode = ex.HResult == -2146233088 ? (int)HttpStatusCode.Unauthorized : (int)HttpStatusCode.InternalServerError;
         }
 
         public void FoundStatus(int Count)

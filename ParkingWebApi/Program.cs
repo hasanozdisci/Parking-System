@@ -1,4 +1,5 @@
 
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ParkingWebApi.Data;
 using System.Reflection;
@@ -20,6 +21,10 @@ namespace ParkingWebApi
             builder.Services.AddDbContext<ParkingSystemDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ParkingSystemDb"));
+            });
+            builder.Services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
             });
             builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

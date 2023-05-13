@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ParkingApp_Core;
+using ParkingApp_Core.Models;
 using ParkingWebApi.Data;
 
 namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
@@ -11,6 +12,7 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
         public LoginUserModel Model { get; set; }
         private readonly ParkingSystemDbContext _context;
         private readonly IMapper _mapper;
+        public User? User { get; set; }
         public LoginUserCommand(ParkingSystemDbContext context, IMapper mapper)
         {
             _context = context;
@@ -18,17 +20,20 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
         }
         public async Task<LoginUserViewModel> Handle()
         {
-            var response = new Response();
-            var user = await _context.Users.Include(c=> c.Car).Include(s=> s.Score).FirstOrDefaultAsync(x => x.Email == Model.Email && x.Password == Model.Password);
-            if (user is null)
-            {
-                throw new InvalidCastException(); 
-            }
             LoginUserViewModel viewModel = new();
+            //var response = new Response();
+            //var user = await _context.Users.Include(c=> c.Car).Include(s=> s.Score).FirstOrDefaultAsync(x => x.Email == Model.Email && x.Password == Model.Password);
+            //if (user is null)
+            //{
+            //    viewModel.Message = "Kullanıcı bulunamadı";
+            //}
             viewModel.Email = Model.Email;
             viewModel.Password = Model.Password;
-            viewModel.CarPlate = user.Car.Car_Plate;
-            viewModel.Point = user.Score.Point;
+            viewModel.CarPlate = User.Car.Car_Plate;
+            viewModel.Point = User.Score.Point;
+            viewModel.Id = User.Id;
+            viewModel.FirstName = User.FirstName;
+            viewModel.LastName = User.LastName;
             return viewModel;
         }
     }
@@ -40,6 +45,10 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
     }
     public class LoginUserViewModel
     {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string Message { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string CarPlate { get; set; }
