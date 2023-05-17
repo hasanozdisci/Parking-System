@@ -10,8 +10,6 @@ namespace ParkingWebApi.Comman
         public MappingProfile()
         {
             CreateMap<User, UserViewModel>()
-                .ForMember(dest => dest.CarPlate, opt => opt
-                .MapFrom(src => src.Car.Car_Plate))
                 .ForMember(dest => dest.Point, opt => opt
                 .MapFrom(src => src.Score.Point));
             

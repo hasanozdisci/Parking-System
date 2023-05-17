@@ -15,7 +15,7 @@ namespace ParkingView
         public static string TYPE_XML = "application/xml";
         public static string TYPE_JSON = "application/json";
 
-        public static Response RequestJSON(string url, object data, string resource, RestSharp.Method method)
+        public static Response RequestJSON(string url, object? data, string resource, RestSharp.Method method)
         {
 
             var response = new Response();
@@ -25,7 +25,10 @@ namespace ParkingView
             request.AddHeader("Accept", TYPE_JSON);
 
             //request.AddParameter(TYPE_JSON, data, ParameterType.RequestBody);
-            request.AddJsonBody(data);
+            if (data is not null)
+            {
+                request.AddJsonBody(data);
+            }
             RestResponse restResponse = client.Execute(request);
             if (restResponse.StatusCode == HttpStatusCode.OK)
                 response = JsonConvert.DeserializeObject<Response>(restResponse.Content);

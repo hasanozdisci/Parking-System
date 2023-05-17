@@ -20,5 +20,19 @@ namespace ParkingApp_Core
             public string Password { get; set; }
             public string CarPlate { get; set; }
         }
+        public class UpdateScore
+        {
+            public int Id { get; set; }
+            public int Point { get; set; }
+        }
+        public class GetById
+        {
+            public int Id { get; set; }
+        }
+        public class GetByIdWithUser
+        {
+            public int Id { get; set; }
+            public int UserId { get; set; }
+        }
     }
 }

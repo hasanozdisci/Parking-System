@@ -13,6 +13,7 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
         private readonly ParkingSystemDbContext _context;
         private readonly IMapper _mapper;
         public User? User { get; set; }
+        public Score Score { get; set; }
         public LoginUserCommand(ParkingSystemDbContext context, IMapper mapper)
         {
             _context = context;
@@ -29,7 +30,7 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
             //}
             viewModel.Email = Model.Email;
             viewModel.Password = Model.Password;
-            viewModel.CarPlate = User.Car.Car_Plate;
+            viewModel.CarPlate = User.Car_Plate;
             viewModel.Point = User.Score.Point;
             viewModel.Id = User.Id;
             viewModel.FirstName = User.FirstName;
@@ -52,6 +53,6 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
         public string Email { get; set; }
         public string Password { get; set; }
         public string CarPlate { get; set; }
-        public string Point { get; set; }
+        public int Point { get; set; }
     }
 }

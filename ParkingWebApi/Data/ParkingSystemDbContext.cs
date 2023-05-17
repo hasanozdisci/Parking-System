@@ -11,7 +11,6 @@ namespace ParkingWebApi.Data
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Score> Scores { get; set; }
-        public DbSet<Car> Cars { get; set; }
         public DbSet<Park> Parks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

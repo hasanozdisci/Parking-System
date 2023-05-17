@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using ParkingApp_Core.Models;
+using ParkingWebApi.Application.UserOperations.Commands.LoginUser;
 using RestSharp;
 
 namespace ParkingView
@@ -33,13 +34,32 @@ namespace ParkingView
                     Email = username,
                     Password = password,
                 };
+
                 var login = ApiCall.RequestJSON($"{connectionString}/Users", loginBody, "Login", Method.Post);
                 if (login.Success)
                 {
                     string userJson = JsonConvert.SerializeObject(login.Result);
-                    var user = JsonConvert.DeserializeObject<User>(userJson);
-                    MessageBox.Show($"Hoþgeldin {(user?.FirstName)} {user?.LastName}");
-                    this.Hide();
+                    var user = JsonConvert.DeserializeObject<LoginUserViewModel>(userJson);
+                    var getPointBody = new
+                    {
+                        Id = user.Id
+                    };
+                    var getPoint = ApiCall.RequestJSON($"{connectionString}/Scores", getPointBody, "GetUserPoint", Method.Get);
+                    if (getPoint.Success)
+                    {
+                        //string pointJson = JsonConvert.SerializeObject(getPoint.Result);
+                        //var point = JsonConvert.DeserializeObject<Score>(pointJson);
+                        //user.Score.Point = Convert.ToInt32(getPoint.Result);
+                        this.Hide();
+                        MainForm mainForm = new(user);
+                        mainForm.Show();
+                    }
+                    else
+                    {
+                        lblError.ForeColor = Color.Red;
+                        lblError.Text = getPoint.Message + "!";
+                    }
+
                 }
                 else
                 {

@@ -15,7 +15,7 @@ namespace ParkingWebApi.Application.UserOperations.Queries.GetUsers
         }
         public async Task<List<UserViewModel>> Handle()
         {
-            var users = await _context.Users.Include(s => s.Score).Include(c => c.Car).ToListAsync();
+            var users = await _context.Users.Include(s => s.Score).ToListAsync();
             List<UserViewModel> userViewModel = _mapper.Map<List<UserViewModel>>(users);
             return userViewModel;
         }

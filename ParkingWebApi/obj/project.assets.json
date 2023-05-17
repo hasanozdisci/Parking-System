@@ -1271,6 +1271,10 @@
       "ParkingApp-Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
         "compile": {
           "bin/placeholder/ParkingApp-Core.dll": {}
         },
@@ -4083,13 +4087,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\hasan\\Masaüstü\\Dersler\\ParkingApp\\ParkingWebApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

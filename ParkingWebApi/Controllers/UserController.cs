@@ -41,7 +41,7 @@ namespace ParkingWebApi.Controllers
             var response = new Response();
             try
             {
-                var user = await _context.Users.Include(c => c.Car).Include(s => s.Score).FirstOrDefaultAsync(x => x.Email == login.Email && x.Password == login.Password);
+                var user = await _context.Users.Include(s => s.Score).FirstOrDefaultAsync(x => x.Email == login.Email && x.Password == login.Password);
                 if (user is null)
                 {
                     response.Message = "Kullanıcı bulunamadı";
@@ -85,14 +85,11 @@ namespace ParkingWebApi.Controllers
                     Password = register.Password,
                     FirstName = register.FirstName,
                     LastName = register.LastName,
+                    Car_Plate = register.CarPlate,
                     Score = new Score()
                     {
-                        Point = "0"
+                        Point = 0
                     },
-                    Car = new Car()
-                    {
-                        Car_Plate = register.CarPlate
-                    }
                 };
                 await _context.AddAsync(user);
                 await _context.SaveChangesAsync();

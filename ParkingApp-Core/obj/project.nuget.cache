@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "5Er9B6ERWUMD9l156kfgVAb/EO8ROS5hPwXTg3pf+8W1HhYJrUjzs/gB5B4Ee/g9Q5JpHezcvnupdWH/tPlS+A==",
+  "dgSpecHash": "1US79WVRkAif4OXsZd8yMUwrdVUIcIJuym7JfyGUajUBDRCfTk/O0AtGTWY7cr4HvF6MOpxlbXMMZ0fKSdqsgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\Masaüstü\\Dersler\\ParkingApp\\ParkingApp-Core\\ParkingApp-Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hasan\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.5\\microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\hasan\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

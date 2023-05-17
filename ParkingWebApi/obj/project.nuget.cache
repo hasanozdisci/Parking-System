@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eQPMixxRRG7otdFuzEfamVlhHIVT3xCX34zkx3AYPMOnKq98eeyQlWJZiVQzsBTsPvbsj4p/EuLUSFGE97MeUA==",
+  "dgSpecHash": "IK8d/LpbMMeEqNhTvM9ain91mF7hX4VXF9niQokU5h3d9N3jdrm93unpcE7GpDWpuXxcs1GP9Y+hXywUvEA7kA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hasan\\Masaüstü\\Dersler\\ParkingApp\\ParkingWebApi\\ParkingWebApi.csproj",
   "expectedPackageFiles": [
@@ -81,12 +81,5 @@
     "C:\\Users\\hasan\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\hasan\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\hasan\\Masaüstü\\Dersler\\ParkingApp\\ParkingWebApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

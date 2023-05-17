@@ -700,6 +700,10 @@
         }
       },
       "ParkingApp-Core/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
         "runtime": {
           "ParkingApp-Core.dll": {}
         }
