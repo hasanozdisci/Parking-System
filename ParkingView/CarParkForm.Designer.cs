@@ -45,8 +45,9 @@
             label1.Name = "label1";
             label1.Size = new Size(125, 148);
             label1.TabIndex = 0;
-            label1.Text = "A1";
+            label1.Text = "PARK 1";
             label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -56,7 +57,7 @@
             label2.Name = "label2";
             label2.Size = new Size(125, 148);
             label2.TabIndex = 0;
-            label2.Text = "A2";
+            label2.Text = "PARK 2";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             label2.Click += label2_Click;
             // 
@@ -68,8 +69,9 @@
             label3.Name = "label3";
             label3.Size = new Size(125, 148);
             label3.TabIndex = 0;
-            label3.Text = "A3";
+            label3.Text = "PARK 3";
             label3.TextAlign = ContentAlignment.MiddleCenter;
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -79,8 +81,9 @@
             label4.Name = "label4";
             label4.Size = new Size(125, 148);
             label4.TabIndex = 0;
-            label4.Text = "B1";
+            label4.Text = "PARK 4";
             label4.TextAlign = ContentAlignment.MiddleCenter;
+            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -90,8 +93,9 @@
             label5.Name = "label5";
             label5.Size = new Size(125, 148);
             label5.TabIndex = 0;
-            label5.Text = "B2";
+            label5.Text = "PARK 5";
             label5.TextAlign = ContentAlignment.MiddleCenter;
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -101,8 +105,9 @@
             label6.Name = "label6";
             label6.Size = new Size(125, 148);
             label6.TabIndex = 0;
-            label6.Text = "B3";
+            label6.Text = "PARK 6";
             label6.TextAlign = ContentAlignment.MiddleCenter;
+            label6.Click += label6_Click;
             // 
             // button1
             // 

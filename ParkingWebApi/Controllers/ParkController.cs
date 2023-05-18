@@ -89,7 +89,14 @@ namespace ParkingWebApi.Controllers
                 return new JsonResult(response);
             }
             parkById.IsBusy = parkById.IsBusy == true ? false : true;
-            parkById.UserId = park.UserId;
+            if(!parkById.IsBusy)
+            {
+                parkById.UserId = null;
+            }
+            else
+            {
+                parkById.UserId = park.UserId;
+            }
             await _context.SaveChangesAsync();
             response.Success = true;
             response.Result = parkById;

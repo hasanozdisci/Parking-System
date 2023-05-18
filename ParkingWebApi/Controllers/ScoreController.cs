@@ -45,11 +45,11 @@ namespace ParkingWebApi.Controllers
             response.Success = true;
             return new JsonResult(response);
         }
-        [HttpPost("{id}")]
-        public async Task<IActionResult> UpdateScoreForParking(int id)
+        [HttpPut]
+        public async Task<IActionResult> UpdateScoreForParking(UserRequestModel.GetById userScore)
         {
             var response = new Response();
-            var user = await _context.Users.Include(s => s.Score).FirstOrDefaultAsync(u => u.Id == id);
+            var user = await _context.Users.Include(s => s.Score).FirstOrDefaultAsync(u => u.Id == userScore.Id);
             if (user is null)
             {
                 response.Success = false;
@@ -66,11 +66,11 @@ namespace ParkingWebApi.Controllers
             response.Success = true;
             return new JsonResult(response);
         }
-        [HttpPost("{id}")]
-        public async Task<IActionResult> UpdateScoreForParkingWithFreeTicket(int id)
+        [HttpPut]
+        public async Task<IActionResult> UpdateScoreForParkingWithFreeTicket(UserRequestModel.GetById userForFreeTicket)
         {
             var response = new Response();
-            var user = await _context.Users.Include(s => s.Score).FirstOrDefaultAsync(u => u.Id == id);
+            var user = await _context.Users.Include(s => s.Score).FirstOrDefaultAsync(u => u.Id == userForFreeTicket.Id);
             if (user is null)
             {
                 response.Success = false;

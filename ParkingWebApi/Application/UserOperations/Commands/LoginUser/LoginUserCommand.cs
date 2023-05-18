@@ -35,6 +35,8 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
             viewModel.Id = User.Id;
             viewModel.FirstName = User.FirstName;
             viewModel.LastName = User.LastName;
+            viewModel.ParkCount = User.ParkCount;
+            viewModel.FreeTicket = User.FreeTicket;
             return viewModel;
         }
     }
@@ -54,5 +56,7 @@ namespace ParkingWebApi.Application.UserOperations.Commands.LoginUser
         public string Password { get; set; }
         public string CarPlate { get; set; }
         public int Point { get; set; }
+        public int ParkCount { get; set; }
+        public int FreeTicket { get; set; } 
     }
 }
