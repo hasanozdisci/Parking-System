@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ParkingView
 {
@@ -134,6 +135,17 @@ namespace ParkingView
 
         private void label2_Click(object sender, EventArgs e)
         {
+            // request api and update user information
+            var loginBody = new
+            {
+                Email = user.Email,
+                Password = user.Password,
+            };
+            var login = ApiCall.RequestJSON($"{connectionString}/Users", loginBody, "Login", Method.Post);
+            if (login.Success)
+            {
+                user = JsonConvert.DeserializeObject<LoginUserViewModel>(login.Result.ToString());
+            }
             var park1 = new
             {
                 Id = 2
@@ -186,12 +198,6 @@ namespace ParkingView
                         MessageBox.Show("Birden fazla park yapamazsınız");
                         return;
                     }
-                    // Kullanıcının bakiyesi yeterli mi?
-                    if (user.Point < 5)
-                    {
-                        MessageBox.Show("Bakiyeniz yetersiz");
-                        return;
-                    }
                     // Kullanıcının free ticketi var mı?
                     if (user.FreeTicket > 0)
                     {
@@ -220,6 +226,13 @@ namespace ParkingView
                             return;
                         }
                     }
+                    // Kullanıcının bakiyesi yeterli mi?
+                    if (user.Point < 5)
+                    {
+                        MessageBox.Show("Bakiyeniz yetersiz");
+                        return;
+                    }
+                    
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -254,6 +267,16 @@ namespace ParkingView
 
         private void label1_Click(object sender, EventArgs e)
         {
+            var loginBody = new
+            {
+                Email = user.Email,
+                Password = user.Password,
+            };
+            var login = ApiCall.RequestJSON($"{connectionString}/Users", loginBody, "Login", Method.Post);
+            if (login.Success)
+            {
+                user = JsonConvert.DeserializeObject<LoginUserViewModel>(login.Result.ToString());
+            }
             var park1 = new
             {
                 Id = 1
@@ -306,12 +329,6 @@ namespace ParkingView
                         MessageBox.Show("Birden fazla park yapamazsınız");
                         return;
                     }
-                    // Kullanıcının bakiyesi yeterli mi?
-                    if (user.Point < 5)
-                    {
-                        MessageBox.Show("Bakiyeniz yetersiz");
-                        return;
-                    }
                     // Kullanıcının free ticketi var mı?
                     if (user.FreeTicket > 0)
                     {
@@ -340,6 +357,13 @@ namespace ParkingView
                             return;
                         }
                     }
+                    // Kullanıcının bakiyesi yeterli mi?
+                    if (user.Point < 5)
+                    {
+                        MessageBox.Show("Bakiyeniz yetersiz");
+                        return;
+                    }
+                    
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -374,6 +398,16 @@ namespace ParkingView
 
         private void label3_Click(object sender, EventArgs e)
         {
+            var loginBody = new
+            {
+                Email = user.Email,
+                Password = user.Password,
+            };
+            var login = ApiCall.RequestJSON($"{connectionString}/Users", loginBody, "Login", Method.Post);
+            if (login.Success)
+            {
+                user = JsonConvert.DeserializeObject<LoginUserViewModel>(login.Result.ToString());
+            }
             var park1 = new
             {
                 Id = 3
@@ -426,12 +460,6 @@ namespace ParkingView
                         MessageBox.Show("Birden fazla park yapamazsınız");
                         return;
                     }
-                    // Kullanıcının bakiyesi yeterli mi?
-                    if (user.Point < 5)
-                    {
-                        MessageBox.Show("Bakiyeniz yetersiz");
-                        return;
-                    }
                     // Kullanıcının free ticketi var mı?
                     if (user.FreeTicket > 0)
                     {
@@ -460,6 +488,13 @@ namespace ParkingView
                             return;
                         }
                     }
+                    // Kullanıcının bakiyesi yeterli mi?
+                    if (user.Point < 5)
+                    {
+                        MessageBox.Show("Bakiyeniz yetersiz");
+                        return;
+                    }
+                 
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -494,6 +529,16 @@ namespace ParkingView
 
         private void label4_Click(object sender, EventArgs e)
         {
+            var loginBody = new
+            {
+                Email = user.Email,
+                Password = user.Password,
+            };
+            var login = ApiCall.RequestJSON($"{connectionString}/Users", loginBody, "Login", Method.Post);
+            if (login.Success)
+            {
+                user = JsonConvert.DeserializeObject<LoginUserViewModel>(login.Result.ToString());
+            }
             var park1 = new
             {
                 Id = 4
@@ -546,12 +591,6 @@ namespace ParkingView
                         MessageBox.Show("Birden fazla park yapamazsınız");
                         return;
                     }
-                    // Kullanıcının bakiyesi yeterli mi?
-                    if (user.Point < 5)
-                    {
-                        MessageBox.Show("Bakiyeniz yetersiz");
-                        return;
-                    }
                     // Kullanıcının free ticketi var mı?
                     if (user.FreeTicket > 0)
                     {
@@ -580,6 +619,13 @@ namespace ParkingView
                             return;
                         }
                     }
+                    // Kullanıcının bakiyesi yeterli mi?
+                    if (user.Point < 5)
+                    {
+                        MessageBox.Show("Bakiyeniz yetersiz");
+                        return;
+                    }
+                    
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -614,6 +660,16 @@ namespace ParkingView
 
         private void label5_Click(object sender, EventArgs e)
         {
+            var loginBody = new
+            {
+                Email = user.Email,
+                Password = user.Password,
+            };
+            var login = ApiCall.RequestJSON($"{connectionString}/Users", loginBody, "Login", Method.Post);
+            if (login.Success)
+            {
+                user = JsonConvert.DeserializeObject<LoginUserViewModel>(login.Result.ToString());
+            }
             var park1 = new
             {
                 Id = 5
@@ -666,12 +722,6 @@ namespace ParkingView
                         MessageBox.Show("Birden fazla park yapamazsınız");
                         return;
                     }
-                    // Kullanıcının bakiyesi yeterli mi?
-                    if (user.Point < 5)
-                    {
-                        MessageBox.Show("Bakiyeniz yetersiz");
-                        return;
-                    }
                     // Kullanıcının free ticketi var mı?
                     if (user.FreeTicket > 0)
                     {
@@ -700,6 +750,13 @@ namespace ParkingView
                             return;
                         }
                     }
+                    // Kullanıcının bakiyesi yeterli mi?
+                    if (user.Point < 5)
+                    {
+                        MessageBox.Show("Bakiyeniz yetersiz");
+                        return;
+                    }
+                   
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -734,6 +791,16 @@ namespace ParkingView
 
         private void label6_Click(object sender, EventArgs e)
         {
+            var loginBody = new
+            {
+                Email = user.Email,
+                Password = user.Password,
+            };
+            var login = ApiCall.RequestJSON($"{connectionString}/Users", loginBody, "Login", Method.Post);
+            if (login.Success)
+            {
+                user = JsonConvert.DeserializeObject<LoginUserViewModel>(login.Result.ToString());
+            }
             var park1 = new
             {
                 Id = 6
@@ -786,12 +853,6 @@ namespace ParkingView
                         MessageBox.Show("Birden fazla park yapamazsınız");
                         return;
                     }
-                    // Kullanıcının bakiyesi yeterli mi?
-                    if (user.Point < 5)
-                    {
-                        MessageBox.Show("Bakiyeniz yetersiz");
-                        return;
-                    }
                     // Kullanıcının free ticketi var mı?
                     if (user.FreeTicket > 0)
                     {
@@ -820,6 +881,13 @@ namespace ParkingView
                             return;
                         }
                     }
+                    // Kullanıcının bakiyesi yeterli mi?
+                    if (user.Point < 5)
+                    {
+                        MessageBox.Show("Bakiyeniz yetersiz");
+                        return;
+                    }
+                   
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
