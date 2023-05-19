@@ -34,7 +34,9 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            button1 = new Button();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@
             // 
             label4.BackColor = Color.LawnGreen;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(48, 260);
+            label4.Location = new Point(48, 269);
             label4.Name = "label4";
             label4.Size = new Size(125, 148);
             label4.TabIndex = 0;
@@ -89,7 +91,7 @@
             // 
             label5.BackColor = Color.LawnGreen;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(297, 260);
+            label5.Location = new Point(297, 269);
             label5.Name = "label5";
             label5.Size = new Size(125, 148);
             label5.TabIndex = 0;
@@ -101,7 +103,7 @@
             // 
             label6.BackColor = Color.LawnGreen;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(557, 260);
+            label6.Location = new Point(557, 269);
             label6.Name = "label6";
             label6.Size = new Size(125, 148);
             label6.TabIndex = 0;
@@ -109,21 +111,39 @@
             label6.TextAlign = ContentAlignment.MiddleCenter;
             label6.Click += label6_Click;
             // 
-            // button1
+            // label7
             // 
-            button1.Location = new Point(230, 485);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            label7.BackColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(48, 222);
+            label7.Name = "label7";
+            label7.Size = new Size(125, 7);
+            label7.TabIndex = 1;
+            // 
+            // label8
+            // 
+            label8.BackColor = SystemColors.ActiveCaptionText;
+            label8.Location = new Point(297, 222);
+            label8.Name = "label8";
+            label8.Size = new Size(125, 7);
+            label8.TabIndex = 2;
+            // 
+            // label9
+            // 
+            label9.BackColor = SystemColors.ActiveCaptionText;
+            label9.Location = new Point(557, 222);
+            label9.Name = "label9";
+            label9.Size = new Size(125, 7);
+            label9.TabIndex = 3;
             // 
             // CarParkForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(739, 568);
-            Controls.Add(button1);
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(713, 462);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label3);
             Controls.Add(label5);
@@ -131,7 +151,8 @@
             Controls.Add(label4);
             Controls.Add(label1);
             Name = "CarParkForm";
-            Text = "CarParkForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Otopark";
             Load += CarParkForm_Load;
             ResumeLayout(false);
         }
@@ -144,6 +165,8 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Button button1;
+        private Label label7;
+        private Label label8;
+        private Label label9;
     }
 }

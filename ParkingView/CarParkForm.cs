@@ -232,7 +232,7 @@ namespace ParkingView
                         MessageBox.Show("Bakiyeniz yetersiz");
                         return;
                     }
-                    
+
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -363,7 +363,7 @@ namespace ParkingView
                         MessageBox.Show("Bakiyeniz yetersiz");
                         return;
                     }
-                    
+
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -494,7 +494,7 @@ namespace ParkingView
                         MessageBox.Show("Bakiyeniz yetersiz");
                         return;
                     }
-                 
+
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -625,7 +625,7 @@ namespace ParkingView
                         MessageBox.Show("Bakiyeniz yetersiz");
                         return;
                     }
-                    
+
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -756,7 +756,7 @@ namespace ParkingView
                         MessageBox.Show("Bakiyeniz yetersiz");
                         return;
                     }
-                   
+
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
@@ -887,7 +887,7 @@ namespace ParkingView
                         MessageBox.Show("Bakiyeniz yetersiz");
                         return;
                     }
-                   
+
                     var updatePark = ApiCall.RequestJSON($"{connectionString}/Parks", park2, "UpdatePark", Method.Put);
                     if (updatePark.Success)
                     {
